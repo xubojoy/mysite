@@ -1,0 +1,38 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>自强学堂</title>#}
+{#</head>#}
+{#<body>#}
+{#<a href="/add/4/5/">计算 4+5 </a>#}
+{#</body>#}
+{#</html>#}
+
+
+{% extends 'learn/base.html' %}
+{% block title %}欢迎光临首页{% endblock %}
+
+{% block content %}
+{% include 'learn/ad.html' %}
+    <p>这里是首页欢迎光临！</p>
+{#    {{ string }}#}
+{#    教程列表：<br>#}
+{#    {% for course in TutorialList %}#}
+{#        {{ course }}<br>#}
+{#    {% endfor %}#}
+{##}
+{#    站点：{{ info_dict.site }}! 内容：{{ info_dict.content }}<br>#}
+{#    #}
+{#    #}
+{#    {% for key, value in info_dict.items %}#}
+{#        {{ key }}:{{ value }}#}
+{#    {% endfor %}#}
+
+     {% for item in List %}
+         {{ item }}{% if not forloop.last %},{% endif %}
+         {% empty %}抱歉列表为空！
+     {% endfor %}
+
+
+{% endblock %}

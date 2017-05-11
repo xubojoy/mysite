@@ -5,13 +5,13 @@
     <title>{% block title %}默认标题{% endblock %}---自强学堂</title>
 </head>
 <body>
-{% include 'nav.html' %}
+{% include 'learn/nav.html' %}
 {% block content %}
 <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
 {% endblock %}
 
-{% include 'bottom.html' %}
+{% include 'learn/bottom.html' %}
 
-{% include 'tongji.html' %}
+{% include 'learn/tongji.html' %}
 </body>
 </html>

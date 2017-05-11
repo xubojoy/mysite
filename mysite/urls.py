@@ -23,4 +23,5 @@ urlpatterns = [
     # url(r'^add/$',learn_views.add, name='add'),
     url(r'^new_add/(\d+)/(\d+)/$',learn_views.add2, name='add2'),
     url(r'^add/(\d+)/(\d+)/$', learn_views.old_add2_redirect),
+
 ]
